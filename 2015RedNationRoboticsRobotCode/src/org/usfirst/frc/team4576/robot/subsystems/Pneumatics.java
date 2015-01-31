@@ -23,7 +23,6 @@ public class Pneumatics extends Subsystem{
 	public void shift(boolean value)
 	{
 		s0.set(value);
-		//s0.startLiveWindowMode();
 	}
 
 }

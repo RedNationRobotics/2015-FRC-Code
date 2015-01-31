@@ -1,5 +1,6 @@
 package org.usfirst.frc.team4576.robot;
 
+import org.usfirst.frc.team4576.robot.commands.ManualOverride;
 import org.usfirst.frc.team4576.robot.commands.Shift;
 
 import edu.wpi.first.wpilibj.buttons.Button;
@@ -38,11 +39,13 @@ public class OI {
     // button.whenReleased(new ExampleCommand());
 	
 	Button b1 = new JoystickButton(Robot.leftStick,1);
+	Button b2 = new JoystickButton(Robot.leftStick,2);
 	Button b3 = new JoystickButton(Robot.leftStick,3);
 	
 	public OI()
 	{
 		b1.whenPressed(new Shift(false));
+		b2.whenPressed(new ManualOverride());
 		b3.whenPressed(new Shift(true));
 	}
 	

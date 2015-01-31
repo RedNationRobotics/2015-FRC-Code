@@ -24,7 +24,8 @@ public class Robot extends IterativeRobot {
 	public static final Chassis chassis = new Chassis();
 	public static final Pneumatics pneumatics = new Pneumatics();
 	public static OI oi;
-
+	public static final String VERSION = "1.0.1-ALPHA";
+	
 	public static Joystick leftStick = new Joystick(0);
 	
     Command autonomousCommand;
@@ -36,7 +37,7 @@ public class Robot extends IterativeRobot {
      * used for any initialization code.
      */
     public void robotInit() {
-    	
+    	System.out.println("RNR Robot Code v. " + VERSION + " is starting up.");
 		oi = new OI();
         // instantiate the command used for the autonomous period
        
