@@ -53,7 +53,7 @@ public class Chassis extends Subsystem {
     }
     public double averageRotation()
     {
-    	return rpm;
+    	return Math.abs(rpm);
     }
     public boolean isManualOverride()
     {

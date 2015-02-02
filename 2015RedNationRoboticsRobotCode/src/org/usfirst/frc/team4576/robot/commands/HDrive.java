@@ -24,12 +24,12 @@ public class HDrive extends Command {
 	protected void execute() {
 		Robot.chassis.hDrive();
 		if (!Robot.chassis.isManualOverride()) {
-			if (Robot.chassis.averagePower() > 5
-					&& Robot.chassis.averageRotation() > 3500) {
+			if (Robot.chassis.averagePower() > 3.6
+					&& Robot.chassis.averageRotation() > 3900) {
 				Robot.pneumatics.shift(true);
 			}
-			if (Robot.chassis.averagePower() < 2.5
-					&& Robot.chassis.averageRotation() < 1000) {
+			if (Robot.chassis.averagePower() < 1.5
+					&& Robot.chassis.averageRotation() < 750) {
 				Robot.pneumatics.shift(false);
 			}
 		}
