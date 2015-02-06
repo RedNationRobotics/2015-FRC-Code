@@ -10,6 +10,7 @@ import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 import org.usfirst.frc.team4576.robot.commands.AutoEnableCompressor;
 import org.usfirst.frc.team4576.robot.commands.HDrive;
 import org.usfirst.frc.team4576.robot.subsystems.Chassis;
+import org.usfirst.frc.team4576.robot.subsystems.Elevator;
 import org.usfirst.frc.team4576.robot.subsystems.Pneumatics;
 
 /**
@@ -23,6 +24,7 @@ public class Robot extends IterativeRobot {
 
 	public static final Chassis chassis = new Chassis();
 	public static final Pneumatics pneumatics = new Pneumatics();
+	public static final Elevator elevator = new Elevator();
 	public static OI oi;
 	public static final String VERSION = "1.0.1-ALPHA";
 	
