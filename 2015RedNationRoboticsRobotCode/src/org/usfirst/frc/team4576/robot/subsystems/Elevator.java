@@ -1,5 +1,7 @@
 package org.usfirst.frc.team4576.robot.subsystems;
 
+import org.usfirst.frc.team4576.robot.Robot;
+
 import edu.wpi.first.wpilibj.CANTalon;
 import edu.wpi.first.wpilibj.DigitalInput;
 import edu.wpi.first.wpilibj.Encoder;
@@ -9,12 +11,12 @@ public class Elevator extends Subsystem{
 
 	public Elevator()
 	{
-		zero();
+		//zero();
 	}
 	CANTalon elevTalon = new CANTalon(5);
-	Encoder e1 = new Encoder(4,5);
-	DigitalInput d6 = new DigitalInput(6);
-	DigitalInput d7 = new DigitalInput(7);
+	Encoder e1 = new Encoder(6,7);
+	DigitalInput d6 = new DigitalInput(8);
+	DigitalInput d7 = new DigitalInput(9);
 	@Override
 	protected void initDefaultCommand() {
 		
@@ -43,7 +45,10 @@ public class Elevator extends Subsystem{
 		elevTalon.set(-1);
 		}
 	}
-	
+	public void gamePadControl()
+	{
+		elevTalon.set(Robot.leftStick.getRawAxis(3) - Robot.leftStick.getRawAxis(2));
+	}
 	
 	
 
