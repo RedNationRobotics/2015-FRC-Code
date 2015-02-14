@@ -13,6 +13,7 @@ public class HDrive extends Command {
 		// Use requires() here to declare subsystem dependencies
 		// eg. requires(chassis);
 		requires(Robot.chassis);
+		requires(Robot.elevator);
 		// might need to require pneumatics
 	}
 
@@ -22,6 +23,7 @@ public class HDrive extends Command {
 
 	// Called repeatedly when this Command is scheduled to run
 	protected void execute() {
+		Robot.elevator.gamePadControl();
 		Robot.chassis.hDrive();
 		if (!Robot.chassis.isManualOverride()) {
 			if (Robot.chassis.averagePower() > 3.6

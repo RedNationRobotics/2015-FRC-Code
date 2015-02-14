@@ -9,7 +9,8 @@ public class Pneumatics extends Subsystem{
 
 	Compressor c = new Compressor();
 	Solenoid s0 = new Solenoid(0);
-	PowerDistributionPanel p;
+	Solenoid s1 = new Solenoid(1);
+	
 	@Override
 	protected void initDefaultCommand() {
 		
@@ -25,4 +26,16 @@ public class Pneumatics extends Subsystem{
 		s0.set(value);
 	}
 
+	public void setArms(boolean closed)
+	{
+		s1.set(closed);
+		
+	}
+	
+	public void toggleArms()
+	{
+		boolean b = !s1.get();
+		s1.set(b);
+		
+	}
 }
