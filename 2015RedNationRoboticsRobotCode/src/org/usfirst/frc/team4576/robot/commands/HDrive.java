@@ -26,7 +26,7 @@ public class HDrive extends Command {
 		Robot.elevator.gamePadControl();
 		Robot.chassis.hDrive();
 		if (!Robot.chassis.isManualOverride()) {
-			if (Robot.chassis.averagePower() > 3.6
+			if (Robot.chassis.averagePower() > 3.6	
 					&& Robot.chassis.averageRotation() > 3900) {
 				Robot.pneumatics.shift(true);
 			}

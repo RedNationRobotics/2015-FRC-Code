@@ -6,6 +6,8 @@ import edu.wpi.first.wpilibj.CANTalon;
 import edu.wpi.first.wpilibj.Encoder;
 import edu.wpi.first.wpilibj.PowerDistributionPanel;
 import edu.wpi.first.wpilibj.RobotDrive;
+import edu.wpi.first.wpilibj.SpeedController;
+import edu.wpi.first.wpilibj.Talon;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
@@ -26,7 +28,8 @@ public class Chassis extends Subsystem {
 	CANTalon tsrxR = new CANTalon(1);
 	CANTalon tsrxL2 = new CANTalon(2);
 	CANTalon tsrxR2 = new CANTalon(3);
-	CANTalon tsrxH = new CANTalon(4);
+	//CANTalon tsrxH = new CANTalon(4);
+	SpeedController tsrxH = new Talon(0);
 	//TalonSRX tsrxH = new TalonSRX(2);
 	RobotDrive drive = new RobotDrive(tsrxL, tsrxL2, tsrxR, tsrxR2);
 	private static final int FORWARD_AXIS = 1;

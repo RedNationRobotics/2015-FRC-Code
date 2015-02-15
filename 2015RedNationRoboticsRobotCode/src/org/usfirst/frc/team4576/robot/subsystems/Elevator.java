@@ -5,6 +5,8 @@ import org.usfirst.frc.team4576.robot.Robot;
 import edu.wpi.first.wpilibj.CANTalon;
 import edu.wpi.first.wpilibj.DigitalInput;
 import edu.wpi.first.wpilibj.Encoder;
+import edu.wpi.first.wpilibj.SpeedController;
+import edu.wpi.first.wpilibj.Talon;
 import edu.wpi.first.wpilibj.command.Subsystem;
 
 public class Elevator extends Subsystem{
@@ -13,7 +15,8 @@ public class Elevator extends Subsystem{
 	{
 		//zero();
 	}
-	CANTalon elevTalon = new CANTalon(5);
+	//CANTalon elevTalon = new CANTalon(5);
+	SpeedController elevTalon = new Talon(1);
 	Encoder e1 = new Encoder(6,7);
 	DigitalInput d6 = new DigitalInput(8);
 	DigitalInput d7 = new DigitalInput(9);
