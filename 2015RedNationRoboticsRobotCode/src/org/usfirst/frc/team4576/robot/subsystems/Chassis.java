@@ -42,7 +42,41 @@ public class Chassis extends Subsystem {
     	
     }
     
-    
+    public void strafe(double h)
+    {
+    	tsrxH.set(h);
+    }
+    public void setLeftRight(double left, double right)
+    {
+    	tsrxR.set(right);
+    	tsrxR2.set(right);
+    	tsrxL.set(left);
+    	tsrxL2.set(left);
+    }
+    public void setLeftRightH(double left, double right, double h)
+    {
+    	tsrxR.set(right);
+    	tsrxR2.set(right);
+    	tsrxL.set(left);
+    	tsrxL2.set(left);
+    	tsrxH.set(h);
+    }
+    public void disable()
+    {
+    	tsrxR.disable();
+    	tsrxR2.disable();
+    	tsrxL.disable();
+    	tsrxL2.disable();
+    	tsrxH.disable();
+    }
+    public void initAuto()
+    {
+    	drive.setSafetyEnabled(false);
+    }
+    public void initTeleop()
+    {
+    	drive.setSafetyEnabled(true);
+    }
     public void normalDrive()
     {
     	//drive.arcadeDrive(Robot.leftStick);

@@ -8,6 +8,7 @@ import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 
 import org.usfirst.frc.team4576.robot.commands.AutoEnableCompressor;
+import org.usfirst.frc.team4576.robot.commands.Autonomous;
 import org.usfirst.frc.team4576.robot.commands.HDrive;
 import org.usfirst.frc.team4576.robot.subsystems.Chassis;
 import org.usfirst.frc.team4576.robot.subsystems.Elevator;
@@ -45,6 +46,7 @@ public class Robot extends IterativeRobot {
        
         teleopCommand = new HDrive();
         compressorStart = new AutoEnableCompressor();
+        autonomousCommand = new Autonomous();
     }
 	
 	public void disabledPeriodic() {
@@ -52,7 +54,6 @@ public class Robot extends IterativeRobot {
 	}
 
     public void autonomousInit() {
-        // schedule the autonomous command (example)
         if (autonomousCommand != null) autonomousCommand.start();
     }
 

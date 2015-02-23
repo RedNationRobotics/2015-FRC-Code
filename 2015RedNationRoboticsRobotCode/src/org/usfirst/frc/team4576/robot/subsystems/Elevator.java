@@ -47,6 +47,23 @@ public class Elevator extends Subsystem{
 	}
 	public void gamePadControl()
 	{
+		if(!d6.get())
+		{
+			if(Robot.leftStick.getRawAxis(3) - Robot.leftStick.getRawAxis(2) < 0)
+			{
+				elevTalon.set(0);
+				return;
+			}
+		}
+		
+		if(!d7.get())
+		{
+			if(Robot.leftStick.getRawAxis(3) - Robot.leftStick.getRawAxis(2) > 0)
+			{
+				elevTalon.set(0);
+				return;
+			}
+		}
 		elevTalon.set(Robot.leftStick.getRawAxis(3) - Robot.leftStick.getRawAxis(2));
 	}
 	

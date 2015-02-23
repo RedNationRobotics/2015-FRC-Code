@@ -14,6 +14,7 @@ public class HDrive extends Command {
 		// eg. requires(chassis);
 		requires(Robot.chassis);
 		requires(Robot.elevator);
+		Robot.chassis.initTeleop();
 		// might need to require pneumatics
 	}
 
