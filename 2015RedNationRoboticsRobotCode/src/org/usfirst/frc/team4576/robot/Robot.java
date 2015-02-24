@@ -8,6 +8,7 @@ import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 
 import org.usfirst.frc.team4576.robot.commands.AutoEnableCompressor;
+import org.usfirst.frc.team4576.robot.commands.Autonomous;
 import org.usfirst.frc.team4576.robot.commands.HDrive;
 import org.usfirst.frc.team4576.robot.subsystems.Chassis;
 import org.usfirst.frc.team4576.robot.subsystems.Elevator;
@@ -29,6 +30,7 @@ public class Robot extends IterativeRobot {
 	public static final String VERSION = "1.0.1-ALPHA";
 	
 	public static Joystick leftStick = new Joystick(0);
+	public static Joystick rightStick = new Joystick(1);
 	
     Command autonomousCommand;
     Command teleopCommand;
@@ -45,6 +47,7 @@ public class Robot extends IterativeRobot {
        
         teleopCommand = new HDrive();
         compressorStart = new AutoEnableCompressor();
+        autonomousCommand = new Autonomous();
     }
 	
 	public void disabledPeriodic() {

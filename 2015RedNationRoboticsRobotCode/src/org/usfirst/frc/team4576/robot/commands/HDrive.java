@@ -23,7 +23,7 @@ public class HDrive extends Command {
 
 	// Called repeatedly when this Command is scheduled to run
 	protected void execute() {
-		Robot.elevator.gamePadControl();
+		Robot.elevator.gamePadControl(Robot.rightStick);
 		Robot.chassis.hDrive();
 		if (!Robot.chassis.isManualOverride()) {
 			if (Robot.chassis.averagePower() > 3.6	
