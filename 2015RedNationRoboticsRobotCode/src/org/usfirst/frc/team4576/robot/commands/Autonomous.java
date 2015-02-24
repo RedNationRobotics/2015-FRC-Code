@@ -9,17 +9,17 @@ public class Autonomous extends Command{
 
 	@Override
 	protected void initialize() {
-		requires(Robot.chassis);
-		requires(Robot.pneumatics);
-		requires(Robot.elevator);
+		//requires(Robot.chassis);
+		//requires(Robot.pneumatics);
+		//requires(Robot.elevator);
 		Robot.elevator.zero();
 		Robot.chassis.initAuto();
-		Robot.chassis.setLeftRight(1, 1);
-		Timer.delay(2);
+		Robot.chassis.setLeftRight(-1, 1);
+		Timer.delay(1);
 		Robot.pneumatics.setArms(true);
 		Timer.delay(1);
 		Robot.elevator.up();
-		Timer.delay(2);
+		Timer.delay(1);
 		Robot.chassis.disable();
 		Timer.delay(.25);
 		Robot.elevator.down();

@@ -43,7 +43,7 @@ public class OI {
 	Button b1 = new JoystickButton(Robot.leftStick,1);
 	Button b2 = new JoystickButton(Robot.leftStick,2);
 	Button b3 = new JoystickButton(Robot.leftStick,3);
-	Button b4 = new JoystickButton(Robot.leftStick,4);
+	Button br4 = new JoystickButton(Robot.rightStick,4);
 	Button b5 = new JoystickButton(Robot.leftStick,5);
 	Button b6 = new JoystickButton(Robot.leftStick,6);
 	
@@ -52,7 +52,7 @@ public class OI {
 		b1.whenPressed(new Shift(false));
 		b2.whenPressed(new ManualOverride());
 		b3.whenPressed(new Shift(true));
-		b4.whenPressed(new ToggleArms());
+		br4.whenPressed(new ToggleArms());
 		//b5.whileHeld(new ControlElevator(false));
 		//b6.whileHeld(new ControlElevator(true));
 	}

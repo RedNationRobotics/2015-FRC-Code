@@ -5,6 +5,8 @@ import org.usfirst.frc.team4576.robot.Robot;
 import edu.wpi.first.wpilibj.CANTalon;
 import edu.wpi.first.wpilibj.DigitalInput;
 import edu.wpi.first.wpilibj.Encoder;
+import edu.wpi.first.wpilibj.Joystick;
+import edu.wpi.first.wpilibj.Talon;
 import edu.wpi.first.wpilibj.command.Subsystem;
 
 public class Elevator extends Subsystem{
@@ -45,11 +47,11 @@ public class Elevator extends Subsystem{
 		elevTalon.set(-1);
 		}
 	}
-	public void gamePadControl()
+	public void gamePadControl(Joystick stick)
 	{
 		if(!d6.get())
 		{
-			if(Robot.leftStick.getRawAxis(3) - Robot.leftStick.getRawAxis(2) < 0)
+			if(stick.getRawAxis(3) - stick.getRawAxis(2) < 0)
 			{
 				elevTalon.set(0);
 				return;
@@ -58,13 +60,13 @@ public class Elevator extends Subsystem{
 		
 		if(!d7.get())
 		{
-			if(Robot.leftStick.getRawAxis(3) - Robot.leftStick.getRawAxis(2) > 0)
+			if(stick.getRawAxis(3) - stick.getRawAxis(2) > 0)
 			{
 				elevTalon.set(0);
 				return;
 			}
 		}
-		elevTalon.set(Robot.leftStick.getRawAxis(3) - Robot.leftStick.getRawAxis(2));
+		elevTalon.set(stick.getRawAxis(3) - stick.getRawAxis(2));
 	}
 	
 	
