@@ -34,7 +34,7 @@ public class Elevator extends Subsystem{
 	
 	public void up()
 	{
-		if(!d6.get())
+		if(!d7.get())
 		{
 			
 		elevTalon.set(1);
