@@ -23,6 +23,7 @@ public class Autonomous extends Command{
 		Robot.elevator.up();
 		//Robot.elevator.down();
 		Timer.delay(1);
+		Robot.elevator.stop();
 		Robot.chassis.setLeftRight(0, 0);
 		//Robot.chassis.disable();
 		//Robot.chassis.initTeleop();
