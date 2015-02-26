@@ -16,7 +16,7 @@ public class Autonomous extends Command{
 		
 		//=================TEST THIS=====================
 		//Robot.elevator.zero();
-		//Robot.chassis.initAuto();
+		Robot.chassis.initAuto();
 		Robot.pneumatics.setArms(true);
 		Timer.delay(0.5);
 		Robot.chassis.setLeftRight(1, -1);
@@ -31,8 +31,7 @@ public class Autonomous extends Command{
 
 	@Override
 	protected void execute() {
-		// TODO Auto-generated method stub
-		
+		Robot.chassis.setLeftRight(0,0);
 	}
 
 	@Override
