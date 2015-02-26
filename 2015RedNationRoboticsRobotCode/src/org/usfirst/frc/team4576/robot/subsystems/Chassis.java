@@ -116,7 +116,7 @@ public class Chassis extends Subsystem {
     	
     	
     	drive.arcadeDrive(Robot.leftStick.getRawAxis(FORWARD_AXIS), Robot.leftStick.getRawAxis(TURN_AXIS));
-    	tsrxH.set(Robot.leftStick.getRawAxis(STRAFE_AXIS));
+    	tsrxH.set(Robot.rightStick.getRawAxis(STRAFE_AXIS));
     }
 }
 
