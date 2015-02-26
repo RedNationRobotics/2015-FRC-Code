@@ -22,7 +22,7 @@ public class Autonomous extends Command{
 		Robot.chassis.setLeftRight(1, -1);
 		Robot.elevator.up();
 		//Robot.elevator.down();
-		Timer.delay(1);
+		Timer.delay(1.7);
 		Robot.elevator.stop();
 		Robot.chassis.setLeftRight(0, 0);
 		//Robot.chassis.disable();
