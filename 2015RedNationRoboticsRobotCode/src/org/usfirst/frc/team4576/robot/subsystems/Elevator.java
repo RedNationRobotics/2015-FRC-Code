@@ -38,6 +38,8 @@ public class Elevator extends Subsystem{
 		{
 			
 		elevTalon.set(1);
+		}else{
+			elevTalon.set(0);
 		}
 	}
 	public void down()
@@ -45,7 +47,13 @@ public class Elevator extends Subsystem{
 		if(!d6.get())
 		{
 		elevTalon.set(-1);
+		}else{
+			elevTalon.set(0);
 		}
+	}
+	public void stop()
+	{
+		elevTalon.set(0);
 	}
 	public void gamePadControl(Joystick stick)
 	{
