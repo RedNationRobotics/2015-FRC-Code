@@ -26,7 +26,7 @@ public class Elevator extends Subsystem{
 	
 	public void zero()
 	{
-		while(!d6.get()){
+		while(d6.get()){
 		elevTalon.set(-0.5);
 		}
 		e1.reset();
@@ -34,7 +34,7 @@ public class Elevator extends Subsystem{
 	
 	public void up()
 	{
-		if(!d7.get())
+		if(d7.get())
 		{
 			
 		elevTalon.set(1);
@@ -44,7 +44,7 @@ public class Elevator extends Subsystem{
 	}
 	public void down()
 	{
-		if(!d6.get())
+		if(d6.get())
 		{
 		elevTalon.set(-1);
 		}else{
