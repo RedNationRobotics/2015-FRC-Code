@@ -12,18 +12,19 @@ public class Autonomous extends Command{
 		//requires(Robot.chassis);
 		//requires(Robot.pneumatics);
 		//requires(Robot.elevator);
+		
+		
+		//=================TEST THIS=====================
 		Robot.elevator.zero();
 		Robot.chassis.initAuto();
-		Robot.chassis.setLeftRight(-1, 1);
-		Timer.delay(1);
 		Robot.pneumatics.setArms(true);
-		Timer.delay(1);
+		Timer.delay(0.5);
+		Robot.chassis.setLeftRight(1, -1);
 		Robot.elevator.up();
 		Timer.delay(1);
-		Robot.chassis.disable();
-		Timer.delay(.25);
 		Robot.elevator.down();
 		Timer.delay(1);
+		Robot.chassis.disable();
 		Robot.pneumatics.setArms(false);
 	}
 
