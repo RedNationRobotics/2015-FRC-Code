@@ -21,11 +21,10 @@ public class Autonomous extends Command{
 		Timer.delay(0.5);
 		Robot.chassis.setLeftRight(1, -1);
 		Robot.elevator.up();
-		Timer.delay(1);
-		Robot.elevator.down();
+		//Robot.elevator.down();
 		Timer.delay(1);
 		Robot.chassis.disable();
-		Robot.pneumatics.setArms(false);
+		//Robot.pneumatics.setArms(false);
 	}
 
 	@Override
