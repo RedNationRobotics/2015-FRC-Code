@@ -15,8 +15,8 @@ public class Autonomous extends Command{
 		
 		
 		//=================TEST THIS=====================
-		Robot.elevator.zero();
-		Robot.chassis.initAuto();
+		//Robot.elevator.zero();
+		//Robot.chassis.initAuto();
 		Robot.pneumatics.setArms(true);
 		Timer.delay(0.5);
 		Robot.chassis.setLeftRight(1, -1);
@@ -24,8 +24,8 @@ public class Autonomous extends Command{
 		//Robot.elevator.down();
 		Timer.delay(1);
 		Robot.chassis.setLeftRight(0, 0);
-		Robot.chassis.disable();
-		Robot.chassis.initTeleop();
+		//Robot.chassis.disable();
+		//Robot.chassis.initTeleop();
 		//Robot.pneumatics.setArms(false);
 	}
 
