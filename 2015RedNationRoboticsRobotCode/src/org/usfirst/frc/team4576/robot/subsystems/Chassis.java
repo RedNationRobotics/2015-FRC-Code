@@ -114,9 +114,15 @@ public class Chassis extends Subsystem {
     	SmartDashboard.putNumber("AverageAmperage",averagePower);
     	
     	
-    	
-    	drive.arcadeDrive(Robot.leftStick.getRawAxis(FORWARD_AXIS), Robot.leftStick.getRawAxis(TURN_AXIS));
-    	tsrxH.set(Robot.leftStick.getRawAxis(STRAFE_AXIS));
+    	double hpower = Robot.leftStick.getRawAxis(STRAFE_AXIS);
+    	if(hpower > 0)
+    	{
+    		hpower -= 0.1;
+    	}else{
+    		hpower += 0.1;
+    	}
+    	drive.arcadeDrive(Robot.leftStick.getRawAxis(FORWARD_AXIS), Robot.leftStick.getRawAxis(TURN_AXIS)/2);
+    	tsrxH.set(hpower);
     }
 }
 
