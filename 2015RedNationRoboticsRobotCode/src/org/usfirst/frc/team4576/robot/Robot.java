@@ -1,6 +1,7 @@
 
 package org.usfirst.frc.team4576.robot;
 
+import edu.wpi.first.wpilibj.CameraServer;
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.command.Command;
@@ -35,7 +36,8 @@ public class Robot extends IterativeRobot {
     Command autonomousCommand;
     Command teleopCommand;
     Command compressorStart;
-
+    CameraServer server;
+    
     /**
      * This function is run when the robot is first started up and should be
      * used for any initialization code.
@@ -48,6 +50,10 @@ public class Robot extends IterativeRobot {
         teleopCommand = new HDrive();
         compressorStart = new AutoEnableCompressor();
         autonomousCommand = new Autonomous();
+        server = CameraServer.getInstance();
+        server.setQuality(50);
+        //the camera name (ex "cam0") can be found through the roborio web interface
+        server.startAutomaticCapture("cam0");
     }
 	
 	public void disabledPeriodic() {
