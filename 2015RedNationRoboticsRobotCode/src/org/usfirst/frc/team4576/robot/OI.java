@@ -4,7 +4,7 @@ package org.usfirst.frc.team4576.robot;
 import org.usfirst.frc.team4576.robot.commands.ManualOverride;
 import org.usfirst.frc.team4576.robot.commands.Shift;
 import org.usfirst.frc.team4576.robot.commands.ToggleArms;
-
+import org.usfirst.frc.team4576.robot.commands.TogglePincer;
 import edu.wpi.first.wpilibj.buttons.Button;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
 
@@ -43,6 +43,7 @@ public class OI {
 	Button b1 = new JoystickButton(Robot.leftStick,1);
 	Button b2 = new JoystickButton(Robot.leftStick,2);
 	Button b3 = new JoystickButton(Robot.leftStick,3);
+	Button br3 = new JoystickButton(Robot.rightStick,3);
 	Button br4 = new JoystickButton(Robot.rightStick,4);
 	Button b5 = new JoystickButton(Robot.leftStick,5);
 	Button b6 = new JoystickButton(Robot.leftStick,6);
@@ -52,6 +53,7 @@ public class OI {
 		b1.whenPressed(new Shift(false));
 		b2.whenPressed(new ManualOverride());
 		b3.whenPressed(new Shift(true));
+		br3.whenPressed(new TogglePincer());
 		br4.whenPressed(new ToggleArms());
 		//b5.whileHeld(new ControlElevator(false));
 		//b6.whileHeld(new ControlElevator(true));

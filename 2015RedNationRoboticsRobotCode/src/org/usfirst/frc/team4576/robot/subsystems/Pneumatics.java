@@ -11,6 +11,9 @@ public class Pneumatics extends Subsystem{
 	Solenoid s0 = new Solenoid(0);
 	Solenoid s1 = new Solenoid(1);
 	Solenoid s2 = new Solenoid(2);
+	//==========CHECK THIS==========
+	Solenoid s3 = new Solenoid(3);
+	//==========END CHECK==========
 	@Override
 	protected void initDefaultCommand() {
 		
@@ -38,4 +41,16 @@ public class Pneumatics extends Subsystem{
 		s1.set(b);
 		s2.set(!b);
 	}
+	
+	//==========CHECK THIS==========
+	public void setPincer(boolean closed)
+	{
+		s3.set(closed);
+	}
+	
+	public void togglePincer()
+	{
+		s3.set(!s3.get());
+	}
+	//==========END CHECK==========
 }
