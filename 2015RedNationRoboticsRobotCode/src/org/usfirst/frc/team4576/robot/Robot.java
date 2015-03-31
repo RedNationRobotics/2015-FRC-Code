@@ -7,6 +7,7 @@ import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 import org.usfirst.frc.team4576.robot.commands.AutoEnableCompressor;
 import org.usfirst.frc.team4576.robot.commands.Autonomous;
@@ -28,7 +29,7 @@ public class Robot extends IterativeRobot {
 	public static final Pneumatics pneumatics = new Pneumatics();
 	public static final Elevator elevator = new Elevator();
 	public static OI oi;
-	public static final String VERSION = "1.0.0-FINAL";
+	public static final String VERSION = "1.1.0-FINAL";
 	
 	public static Joystick leftStick = new Joystick(0);
 	public static Joystick rightStick = new Joystick(1);
@@ -54,6 +55,10 @@ public class Robot extends IterativeRobot {
         server.setQuality(50);
         //the camera name (ex "cam0") can be found through the roborio web interface
         server.startAutomaticCapture("cam0");
+        SmartDashboard.putBoolean("auto_1", true);
+        SmartDashboard.putBoolean("auto_1", false);
+        SmartDashboard.putBoolean("auto_1", false);
+        
     }
 	
 	public void disabledPeriodic() {

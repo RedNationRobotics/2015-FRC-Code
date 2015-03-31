@@ -14,6 +14,10 @@ public class Autonomous extends Command{
 		//requires(Robot.elevator);
 		
 		
+		//logic will follow a fallback method as so:
+		//if (auto_1) then auto_1 return else if (auto_2) then auto_2 return else if (auto_3) then auto_3 return end;
+		
+		
 		//=================TEST THIS=====================
 		//Robot.elevator.zero();
 		Robot.chassis.initAuto();
