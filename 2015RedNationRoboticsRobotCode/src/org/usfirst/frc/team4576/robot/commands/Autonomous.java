@@ -4,6 +4,7 @@ import org.usfirst.frc.team4576.robot.Robot;
 
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.command.Command;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 public class Autonomous extends Command{
 
@@ -25,10 +26,16 @@ public class Autonomous extends Command{
 		//Timer.delay(0.5);
 		Robot.elevator.up();
 		Timer.delay(1);
+		if(SmartDashboard.getBoolean("pickupGreen"))
+		{
+			
+		
 		Robot.elevator.stop();
 		Robot.pneumatics.setArms(true);
 		Timer.delay(0.5);
+		
 		Robot.elevator.up();
+		}
 		Timer.delay(0.5);
 		Robot.elevator.stop();
 		Robot.chassis.setLeftRight(0.8, -0.8);
