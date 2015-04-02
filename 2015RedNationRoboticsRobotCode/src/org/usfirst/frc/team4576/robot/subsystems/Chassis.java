@@ -115,13 +115,15 @@ public class Chassis extends Subsystem {
     	
     	
     	double hpower = Robot.leftStick.getRawAxis(STRAFE_AXIS);
-    	if(hpower > 0)
+    	if(hpower > 0.1)
     	{
     		hpower -= 0.1;
-    	}else{
+    	}else if (hpower < -0.1){
     		hpower += 0.1;
+    	}else{
+    		hpower = 0;
     	}
-    	drive.arcadeDrive(Robot.leftStick.getRawAxis(FORWARD_AXIS), Robot.leftStick.getRawAxis(TURN_AXIS)/2);
+    	drive.arcadeDrive(Robot.leftStick.getRawAxis(FORWARD_AXIS), Robot.leftStick.getRawAxis(TURN_AXIS) * 0.6);
     	tsrxH.set(hpower);
     }
 }
